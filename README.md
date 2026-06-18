@@ -1,31 +1,48 @@
-# shopsphere-churn-analysis
-End-to-end customer churn analysis using Python and SQL
+# 🛒 ShopSphere Customer Churn Analysis
 
-# ShopSphere Customer Churn Analysis
+> End-to-end data analytics project identifying $1.6M in annual revenue
+> at risk from customer churn, with 3 actionable recommendations worth
+> $70,000/month in projected revenue recovery.
 
-## What This Project Does
-Analyzes 5,000 customer records to identify why customers leave
-ShopSphere and which customers are at highest risk of churning.
+---
 
-## Tech Stack
-- Python (pandas, numpy, matplotlib, seaborn) — Data cleaning and analysis
-- SQL (SQLite) — Business question queries
-- Faker — Realistic data generation
+## 📊 The Business Problem
 
-## Key Findings
-- 38% overall churn rate = $1.6M annual revenue at risk
-- Customers who complain are 2.4x more likely to churn
-- 67% of customers in their first 3 months churn
-- Churn rate doubles for customers living over 20km from warehouse
+ShopSphere, an e-commerce retailer, was experiencing strong customer
+acquisition but stagnant revenue growth. The Marketing Director needed
+to know:
 
-## How to Run
-pip install pandas numpy matplotlib seaborn faker
-python notebooks/01_data_generation.py
-python notebooks/02_data_cleaning.py
-python notebooks/03_eda_analysis.py
-python notebooks/04_visualizations.py
+1. **Why** are customers leaving?
+2. **Who** is at the highest risk of churning?
+3. **What** can be done to retain them?
 
-## Business Impact
-Three recommendations with estimated $70,000/month in
-recoverable revenue. See reports/business_recommendations.md
+This project answers all three using data.
 
+---
+
+## 🔧 Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| **Python (pandas, numpy)** | Data cleaning & transformation |
+| **Matplotlib & Seaborn** | Data visualization |
+| **SQL (SQLite)** | Business question analysis |
+| **Faker** | Realistic mock data generation |
+| **VS Code** | Development environment |
+| **GitHub** | Version control & portfolio |
+
+---
+
+## 🔑 Key Findings
+
+| # | Finding | Impact |
+|---|---------|--------|
+| 1 | Overall churn rate is **38%** | $1.6M annual revenue at risk |
+| 2 | Customers who complain churn at **2.4x** the rate | Single biggest predictor |
+| 3 | **67%** of customers in months 0-3 churn | Onboarding is broken |
+| 4 | Churn **doubles** for customers over 20km from warehouse | Logistics issue |
+| 5 | Higher cashback strongly correlates with lower churn | Retention lever exists |
+
+---
+
+## 📁 Project Structure
