@@ -46,3 +46,134 @@ This project answers all three using data.
 ---
 
 ## 📁 Project Structure
+
+```
+shopsphere-churn-analysis/
+├── data/
+│   ├── raw/                              ← Generated mock data
+│   │   └── shopsphere_raw.csv
+│   └── cleaned/                          ← Cleaned & feature-engineered
+│       └── shopsphere_clean.csv
+│
+├── notebooks/                            ← Python pipeline
+│   ├── 01_data_generation.py
+│   ├── 02_data_cleaning.py
+│   ├── 03_eda_analysis.py
+│   └── 04_visualizations.py
+│
+├── sql/                                  ← SQL analysis
+│   └── churn_analysis_queries.sql
+│
+├── dashboard/                            ← Output charts
+│   ├── chart1_kpi_cards.png
+│   ├── chart2_churn_by_category.png
+│   ├── chart3_complaints_vs_churn.png
+│   ├── chart4_cashback_vs_churn.png
+│   ├── chart5_churn_by_tenure.png
+│   └── chart6_distance_vs_churn.png
+│
+├── reports/
+│   └── business_recommendations.md       ← Executive summary
+│
+├── shopsphere.db                         ← SQLite database
+└── README.md
+```
+
+---
+
+## 📈 Visualizations
+
+### Executive KPI Summary
+![KPI Cards](dashboard/chart1_kpi_cards.png)
+
+### Churn by Product Category
+![Churn by Category](dashboard/chart2_churn_by_category.png)
+
+### Complaints — The #1 Churn Predictor
+![Complaints vs Churn](dashboard/chart3_complaints_vs_churn.png)
+
+### Cashback Incentive Effectiveness
+![Cashback vs Churn](dashboard/chart4_cashback_vs_churn.png)
+
+### Customer Tenure — The First 6 Months Matter Most
+![Churn by Tenure](dashboard/chart5_churn_by_tenure.png)
+
+### Distance from Warehouse Drives Churn
+![Distance vs Churn](dashboard/chart6_distance_vs_churn.png)
+
+---
+
+## 💼 Business Recommendations
+
+| Priority | Recommendation | Monthly Revenue Saved |
+|----------|----------------|----------------------|
+| **1** | Automated service-recovery for complainers | ~$38,000 |
+| **2** | 6-month new customer onboarding program | ~$15,000 |
+| **3** | Free shipping for customers over 25km | ~$17,000 |
+| | **TOTAL ESTIMATED IMPACT** | **~$70,000/month** |
+
+📄 **[Full Business Report →](reports/business_recommendations.md)**
+
+---
+
+## 🚀 How to Run This Project
+
+### Prerequisites
+- Python 3.8 or higher
+- VS Code (recommended)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/sayanVKmajumdar/shopsphere-churn-analysis.git
+cd shopsphere-churn-analysis
+
+# Install dependencies
+pip install pandas numpy matplotlib seaborn faker
+```
+
+### Run the Pipeline (in order)
+
+```bash
+python notebooks/01_data_generation.py
+python notebooks/02_data_cleaning.py
+python notebooks/03_eda_analysis.py
+python notebooks/04_visualizations.py
+```
+
+### Run SQL Queries
+
+1. Install [DB Browser for SQLite](https://sqlitebrowser.org/)
+2. Open `shopsphere.db`
+3. Run queries from `sql/churn_analysis_queries.sql`
+
+---
+
+## 📚 What I Learned
+
+- **Data cleaning is 60% of the job** — Handling outliers BEFORE imputation
+  matters because medians get distorted by extreme values
+- **Feature engineering creates insights** — Bucketing tenure into segments
+  (0-3 Mo, 3-6 Mo, etc.) revealed the critical "first 6 months" pattern
+  that raw tenure data did not show
+- **Business framing matters more than code** — A 70% complaint→churn rate
+  is interesting; "$38K/month in recoverable revenue" gets approved
+- **SQL and Python produce identical results** — Knowing both languages
+  lets you work with any team's tech stack
+
+---
+
+## 👤 Author
+
+**Sayan Majumdar**
+
+- 📧 Email: majumdarp428@gmail.com
+- 💼 LinkedIn: (https://www.linkedin.com/in/sayan-majumdar-21b050246/)
+- 🌐 GitHub: [github.com/sayanVKmajumdar](https://github.com/sayanVKmajumdar)
+
+---
+
+## 📄 License
+
+This project is open source and available for educational purposes.
